@@ -25,14 +25,25 @@ Public registration creates only `buyer` users. A user can read and update their
 | `product_name` | text | Required |
 | `category` | select | `fruit`, `vegetable`, `seafood`, `coffee`, `rice`, `cashew`, `spice`, `other` |
 | `quantity`, `target_country`, `budget_range` | text | Optional |
+| `quantity_unit` | select | Optional: `kg`, `ton`, `container`, `carton`, or `piece` |
+| `trade_intent` | select | Required: `buy` or `sell` |
+| `needed_at` | text | Required trade date, stored as `YYYY-MM-DD 00:00:00` |
+| `product_description` | text | Optional product-specific description shown to reviewers and copied to the public listing |
+| `contact_name`, `contact_phone`, `contact_email` | text, text, email | Optional contact snapshot for the submitted case |
 | `description` | editor | Optional |
 | `status` | select | `draft`, `submitted`, `reviewing`, `sourcing`, `quoted`, `completed`, `cancelled` |
 | `created_by` | relation → users | Required |
 | `attachments` | files | Optional, up to 10 files, max 10 MB each |
 
-Authenticated users can create requests only for themselves and can access their own records. App admins can access every record.
+Authenticated users can create requests only for themselves and can access, update, or delete their own records. App admins can access and manage every record.
 
 ## `supplier_leads`
+
+## `approved_listings`
+
+Public-safe listings created when an app admin approves a sourcing request. They contain title, product, category, quantity, target market, required trade intent/time, budget, and description, plus the source request relation. Buyer name, phone, and email are deliberately excluded. If a buyer edits an approved request, the mobile app sets the request back to `submitted` and deletes the linked public listing so the edited post waits for admin approval again.
+
+`published_at` is an optional text timestamp in `YYYY-MM-DD HH:mm:ss`, written at approval time and used as the public listing date.
 
 `request` is a required relation to `sourcing_requests`. `supplier_name` is required. Optional text fields are `contact_name`, `phone`, `country`, `address`, `quoted_price`, and `moq`; `email` and `website` use their respective validation types; `notes` is an editor field. `status` is one of `new`, `contacted`, `verified`, `rejected`, or `shortlisted`. `created_by` is an optional relation to `users`.
 

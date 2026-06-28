@@ -61,7 +61,7 @@ Request owners can read their leads. Only app admins can create, update, or dele
 
 | Role | Email | Password |
 | --- | --- | --- |
-| Buyer | `buyer.demo@nextrade.local` | `DemoPass123!` |
-| App admin | `admin.demo@nextrade.local` | `DemoPass123!` |
+| Buyer | `buyer.demo@nextrade.local` | `Nex@1234` |
+| App admin | `admin.demo@nextrade.local` | `Nex@1234` |
 
 These are local development credentials only. The app admin is not the PocketBase dashboard superuser.

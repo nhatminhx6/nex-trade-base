@@ -16,7 +16,7 @@ Use this account only at the admin dashboard (`/_/`). It is a PocketBase superus
 
 ```text
 Email: admin@nextrade.local
-Password: somaxDMqtmfdANSApIaehQCA
+Password: Nex@1234
 ```
 
 ## Demo app accounts
@@ -25,8 +25,8 @@ Use these accounts for the SwiftUI app or the PocketBase API login endpoint. The
 
 | Account | Email | Password | App role |
 | --- | --- | --- | --- |
-| Demo buyer | `buyer.demo@nextrade.local` | `DemoPass123!` | `buyer` |
-| Demo app admin | `admin.demo@nextrade.local` | `DemoPass123!` | `admin` |
+| Demo buyer | `buyer.demo@nextrade.local` | `Nex@1234` | `buyer` |
+| Demo app admin | `admin.demo@nextrade.local` | `Nex@1234` | `admin` |
 
 ## Login endpoint for the app
 
@@ -39,7 +39,7 @@ Example request body:
 ```json
 {
   "identity": "buyer.demo@nextrade.local",
-  "password": "DemoPass123!"
+  "password": "Nex@1234"
 }
 ```
 

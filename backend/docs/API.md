@@ -11,8 +11,8 @@ PocketBase uses JSON and bearer tokens. Store the `token` from login in the Keyc
 ```json
 {
   "email": "buyer@example.com",
-  "password": "a-strong-password",
-  "passwordConfirm": "a-strong-password",
+  "password": "Nex@1234",
+  "passwordConfirm": "Nex@1234",
   "name": "Mai Nguyen",
   "phone": "+84900000000",
   "company_name": "Example Imports",
@@ -29,7 +29,7 @@ The public rule accepts only `buyer` for `role`.
 ```json
 {
   "identity": "buyer@example.com",
-  "password": "a-strong-password"
+  "password": "Nex@1234"
 }
 ```
 

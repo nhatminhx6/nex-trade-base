@@ -8,8 +8,8 @@ migrate((app) => {
   const createUser = (email, name, role, companyName) => {
     const record = new Record(users);
     record.set("email", email);
-    record.set("password", "DemoPass123!");
-    record.set("passwordConfirm", "DemoPass123!");
+    record.set("password", "Nex@1234");
+    record.set("passwordConfirm", "Nex@1234");
     record.set("name", name);
     record.set("company_name", companyName);
     record.set("role", role);
